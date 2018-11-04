@@ -1,0 +1,65 @@
+<div class="container-fluid">
+
+  <div class="row page-title">
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+      <a href="<%= url_for :action => :index %>" class="btn btn-default btn-sm pull-left">Back</a>
+    </div>
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+      <h3 class="text-center"><%= @book.name %></h3>
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+      <a href="<%= url_for :action => :edit, :id => @book.object %>" class="btn btn-primary btn-sm pull-right">Edit</a>
+    </div>
+  </div>
+
+  <div class="row">
+    <ul class="list-group">
+      
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <span pull-right><strong>Name</strong></span>
+              </div>
+              <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <%= @book.name %>
+              </div>
+            </div>
+          </li>
+      
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <span pull-right><strong>Author</strong></span>
+              </div>
+              <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <%= @book.author %>
+              </div>
+            </div>
+          </li>
+      
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <span pull-right><strong>Isbn</strong></span>
+              </div>
+              <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <%= @book.isbn %>
+              </div>
+            </div>
+          </li>
+      
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <span pull-right><strong>Picture</strong></span>
+              </div>
+              <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <img src="<%= @book.picture %>" width="100%" alt="Error while loading picture"/>
+              </div>
+            </div>
+          </li>
+      
+    </ul>
+  </div>
+
+</div>
